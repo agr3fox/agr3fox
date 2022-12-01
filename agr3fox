@@ -1,0 +1,23 @@
+local function callback(Text)
+    if Text == ("InfiniteYield") then
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/agr3fox/PurpleFox/main/Loader"))()
+elseif Text == ("FatesAdmin") then
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+	end
+end
+
+wait(-5)
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+--
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "Loader";
+ Text = "Quale Exploit vuoi usare ?";
+ Icon = "";
+ Duration = 15;
+ Button1 = "InfiniteYield";
+ Button2 = "FatesAdmin";
+ Callback = NotificationBindable;
+})
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/agr3fox/PurpleFox/main/multiloadstring.lua"))()
